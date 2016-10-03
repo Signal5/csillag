@@ -40,7 +40,7 @@ function _csillag( $x, $y, $radius, $forma='polygon', $cs=NULL ) {
         $pont[9]['y'] = $y - ( $belso * sin( deg2rad( 90 - $szog/2 ) ) ) ;
     }
     ksort( $pont ) ;
-    $hely = array() ;  // új tömb                                                                                                                
+    $hely = array() ;  // Ãºj tÃ¶mb                                                                                                                
     foreach( $pont as $pKey=>$pErtek ) {                                                                                                   
         if( is_array( $pErtek ) ) {                                                                                                         
             foreach( $pErtek as $pSubKey=>$pSubErt ) {                                                                                      
@@ -52,7 +52,7 @@ function _csillag( $x, $y, $radius, $forma='polygon', $cs=NULL ) {
 
 
 }
-$ertek = _csillag( 120, 350, 59, 'star' ); //x, y, méret
+$ertek = _csillag( 120, 350, 59, 'star' ); //x, y, mÃ©ret
 $ertek1 = _csillag( 125, 346, 59, 'star' ) ;
 $ertek2 = _csillag( 130, 342, 59, 'star' ) ;
 $ertek3 = _csillag( 135, 338, 59, 'star' ) ;
@@ -62,7 +62,7 @@ $ertek5 = _csillag( 145, 330, 59, 'star' ) ;
 $im = imagecreate(500,500);  //rajzkeret
 imagecolorallocate($im,13,4,4);
 
-$w = imagecolorallocate($im, 255, 254, 25); //sárga
+$w = imagecolorallocate($im, 255, 254, 25); //sÃ¡rga
 imagefilledpolygon($im, $ertek, 10, $w);
 $w = imagecolorallocate($im, 255, 120, 31); //narancs
 imagefilledpolygon($im, $ertek1, 10, $w);
@@ -72,7 +72,7 @@ $w = imagecolorallocate($im, 255, 50, 218); //pink
 imagefilledpolygon($im, $ertek3, 10, $w);
 $w = imagecolorallocate($im, 155, 76, 255); //lila
 imagefilledpolygon($im, $ertek4, 10, $w);
-$w = imagecolorallocate($im, 81, 255, 0); //zöld
+$w = imagecolorallocate($im, 81, 255, 0); //zÃ¶ld
 imagefilledpolygon($im, $ertek5, 10, $w);
 
 imagepng($im,"demoimage.png");
@@ -83,7 +83,7 @@ imagedestroy($im);
    
 
    
-    
+   
     
 </body>
 </html>
